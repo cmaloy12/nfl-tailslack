@@ -11,6 +11,15 @@ import urllib.request
 from datetime import datetime
 from bs4 import BeautifulSoup
 
+# Load .env file if present locally
+env_file = os.path.join(os.path.dirname(__file__), ".env")
+if os.path.exists(env_file):
+    with open(env_file) as f:
+        for line in f:
+            if "=" in line and not line.strip().startswith("#"):
+                k, v = line.strip().split("=", 1)
+                os.environ[k.strip()] = v.strip().strip('"').strip("'")
+
 PLATFORM = os.environ.get("FANTASY_PLATFORM", "yahoo").lower()
 SLACK_WEBHOOK_URL = os.environ.get("SLACK_WEBHOOK_URL", "")
 TEAM_NAME = os.environ.get("FANTASY_TEAM_NAME", "My Team")
