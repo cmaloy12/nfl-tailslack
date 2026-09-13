@@ -13,10 +13,10 @@ from bs4 import BeautifulSoup
 
 PLATFORM = os.environ.get("FANTASY_PLATFORM", "yahoo").lower()
 SLACK_WEBHOOK_URL = os.environ.get("SLACK_WEBHOOK_URL", "")
-TEAM_NAME = os.environ.get("FANTASY_TEAM_NAME", "Lane's Johnson")
+TEAM_NAME = os.environ.get("FANTASY_TEAM_NAME", "My Team")
 FREQUENCY = os.environ.get("UPDATE_FREQUENCY", "half").lower()  # quarter, half, full
 
-YAHOO_LEAGUE_ID = os.environ.get("YAHOO_LEAGUE_ID", "175960")
+YAHOO_LEAGUE_ID = os.environ.get("YAHOO_LEAGUE_ID", "")
 
 def fetch_yahoo():
     try:
