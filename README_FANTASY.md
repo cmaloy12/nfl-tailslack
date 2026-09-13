@@ -1,4 +1,4 @@
-# Multi-Platform Fantasy Football Slack Notifier
+# NFL-TailSlack
 
 An open-source Python script for Hermes Agent and the community that fetches fantasy matchup scores from **ESPN**, **Sleeper**, or **Yahoo** and pushes updates directly to a Slack channel via Webhooks.
 
